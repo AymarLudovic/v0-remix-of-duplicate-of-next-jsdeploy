@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --background: 220 13% 18%;
+    --foreground: 210 40% 98%;
+    --card: 220 13% 18%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 13% 18%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 13% 25%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 13% 25%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 25%;
+    --input: 220 13% 25%;
+    --ring: 262 83% 58%;
+    --chart-1: 262 83% 58%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.75rem;
+    --sidebar-background: 220 13% 18%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 220 13% 25%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 13% 25%;
+    --sidebar-ring: 262 83% 58%;
+  }
+
+  .dark {
+    --background: 220 13% 18%;
+    --foreground: 210 40% 98%;
+    --card: 220 13% 18%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 13% 18%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 13% 25%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 13% 25%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 25%;
+    --input: 220 13% 25%;
+    --ring: 262 83% 58%;
+    --chart-1: 262 83% 58%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 220 13% 18%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 220 13% 25%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 13% 25%;
+    --sidebar-ring: 262 83% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    /* Changed background to complete black #000000 */
+    @apply bg-[#000000] text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .gradient-border {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent))) padding-box,
+      linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent))) border-box;
+    border: 2px solid transparent;
+  }
+
+  /* Updated chat bubble styles - user messages with bg-[#111] and rounded-[10px], assistant messages with no background */
+  .chat-bubble-user {
+    @apply bg-[#111] text-white rounded-[10px] px-4 py-2 max-w-[80%] ml-auto;
+  }
+
+  .chat-bubble-assistant {
+    @apply text-white px-4 py-2 max-w-[80%] mr-auto;
+  }
+
+  .modern-card {
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+}
