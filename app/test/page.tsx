@@ -586,7 +586,7 @@ module.exports = {
               handleSend()
             }
           }}
-          className="w-full min-h-[160px] bg-[#000000] text-white placeholder-gray-400 rounded-[25px] p-6 pl-32 pr-16 resize-none outline-none ring-4 ring-[#222] focus:ring-[#333] transition-all"
+          className="w-full min-h-[160px] md:w-full bg-[#000000] text-white placeholder-gray-400 rounded-[25px] p-6 pl-32 pr-16 resize-none outline-none ring-4 ring-[#222] focus:ring-[#333] transition-all"
           style={{ outline: "none" }}
         />
         <Button
