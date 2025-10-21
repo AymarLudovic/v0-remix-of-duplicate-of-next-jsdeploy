@@ -1219,7 +1219,7 @@ SUPABASE_SERVICE_ROLE_KEY=${data.project.serviceRoleKey}`
       <div className="items-center h-full w-full justify-between overflow-x-hidden flex">
         
 
-        <div className={`flex flex-col overflow-x-hidden transition-all duration-300 ${
+        <div className={`flex flex-col justify-center items-center overflow-x-hidden transition-all duration-300 ${
   isChat ? "w-full md:w-1/2" : "hidden md:flex md:w-1/2"
 }`}>
           <Chat
@@ -1239,7 +1239,7 @@ SUPABASE_SERVICE_ROLE_KEY=${data.project.serviceRoleKey}`
           )}
         </div>
 
-  <div className={`w-1/2 bg-[#0a0a0a] border border-[#111] rounded-xl p-6 flex flex-col transition-all duration-300 ${
+  <div className={`w-1/2 bg-[#0a0a0a] flex h-full justify-center items-center border border-[#111] rounded-xl p-6 flex flex-col transition-all duration-300 ${
   isChat ? "hidden md:flex md:w-1/2" : "w-full md:w-1/2"
 }`}>
           <div className="flex items-center gap-1 mb-6 bg-[#111] p-1 rounded-lg w-fit">
