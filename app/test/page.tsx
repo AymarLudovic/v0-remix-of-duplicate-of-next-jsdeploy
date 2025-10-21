@@ -502,7 +502,7 @@ module.exports = {
   const storedProjects = getStoredProjects()
 
   return (
-    <div className="bg-[#000000] p-6 space-y-6 h-full relative">
+    <div className="bg-[#000000] p-6 space-y-6 h-full w-full relative">
       <div className="h-[80%] bg-[#000000] rounded-xl p-4 overflow-y-auto space-y-4">
         {messages.map((m, i) => (
           <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
@@ -517,7 +517,7 @@ module.exports = {
         ))}
       </div>
 
-      <div className="relative w-full md:w-auto">
+      <div className="relative w-full md:w-full">
         <Button className="absolute bottom-1 left-3 h-[32px] w-[32px] p-0 rounded-[10px] bg-[#111] hover:bg-[#222] text-white">
           <svg width="16" height="16" viewBox="0 0 109 113" fill="none">
             <path
@@ -1216,7 +1216,7 @@ SUPABASE_SERVICE_ROLE_KEY=${data.project.serviceRoleKey}`
 
 
       
-      <div className="items-center w-full justify-between overflow-x-hidden flex">
+      <div className="items-center h-full w-full justify-between overflow-x-hidden flex">
         
 
         <div className={`flex flex-col overflow-x-hidden transition-all duration-300 ${
