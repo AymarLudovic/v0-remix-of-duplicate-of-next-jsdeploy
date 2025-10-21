@@ -755,6 +755,8 @@ const generateProjectName = () => {
 
 export default function TestPage() {
   const [logs, setLogs] = useState<string[]>([])
+  const [isChat, setIsChat] = useState(true)
+  
   const [url, setUrl] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [projectUrl, setProjectUrl] = useState<string | null>(null)
@@ -1191,8 +1193,35 @@ SUPABASE_SERVICE_ROLE_KEY=${data.project.serviceRoleKey}`
         </div>
       </header>
 
+
+<div className="flex fixed left-[45%] top-1 justify-center gap-3 mb-4">
+  <button
+    onClick={() => setIsChat(true)}
+    className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+      isChat ? "bg-blue-600 text-white" : "bg-gray-800 text-gray-400"
+    }`}
+  >
+    Chat
+  </button>
+  <button
+    onClick={() => setIsChat(false)}
+    className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+      !isChat ? "bg-blue-600 text-white" : "bg-gray-800 text-gray-400"
+    }`}
+  >
+    Preview
+  </button>
+</div>
+      
+
+
+      
       <div className="flex-1 flex">
-        <div className="w-1/2 flex flex-col">
+        
+
+        <div className={`flex flex-col transition-all duration-300 ${
+  isChat ? "w-full md:w-1/2" : "hidden md:flex md:w-1/2"
+}`}>
           <Chat
             onApplyPlan={applyPlan}
             onRequestAnalysis={requestAnalysis}
@@ -1210,7 +1239,9 @@ SUPABASE_SERVICE_ROLE_KEY=${data.project.serviceRoleKey}`
           )}
         </div>
 
-        <div className="w-1/2 bg-[#0a0a0a] border border-[#111] rounded-xl p-6 flex flex-col">
+  <div className={`w-1/2 bg-[#0a0a0a] border border-[#111] rounded-xl p-6 flex flex-col transition-all duration-300 ${
+  isChat ? "hidden md:flex md:w-1/2" : "w-full md:w-1/2"
+}`}>
           <div className="flex items-center gap-1 mb-6 bg-[#111] p-1 rounded-lg w-fit">
             <button
               onClick={() => setActiveTab("preview")}
