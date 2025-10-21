@@ -1216,10 +1216,10 @@ SUPABASE_SERVICE_ROLE_KEY=${data.project.serviceRoleKey}`
 
 
       
-      <div className="flex-1 flex">
+      <div className="items-center w-full justify-between overflow-x-hidden flex">
         
 
-        <div className={`flex flex-col transition-all duration-300 ${
+        <div className={`flex flex-col overflow-x-hidden transition-all duration-300 ${
   isChat ? "w-full md:w-1/2" : "hidden md:flex md:w-1/2"
 }`}>
           <Chat
