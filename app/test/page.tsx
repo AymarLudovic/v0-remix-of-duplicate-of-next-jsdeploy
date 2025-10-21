@@ -517,7 +517,7 @@ module.exports = {
         ))}
       </div>
 
-      <div className="relative">
+      <div className="relative w-full md:w-auto">
         <Button className="absolute bottom-1 left-3 h-[32px] w-[32px] p-0 rounded-[10px] bg-[#111] hover:bg-[#222] text-white">
           <svg width="16" height="16" viewBox="0 0 109 113" fill="none">
             <path
